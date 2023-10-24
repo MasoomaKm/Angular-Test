@@ -1,0 +1,31 @@
+@import "../../styles.scss";
+
+.users{
+
+    width: 100%;
+    border-collapse: collapse;
+    th{
+        background: #7d7c7c;
+        border: 1 solid #000;
+    }
+    th{
+        background-color: bisque;
+    }
+}
+
+@include query (mobile){
+
+    th, td {
+        display: block;
+    }
+
+    th {
+        display: none;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+    }
+
+  }

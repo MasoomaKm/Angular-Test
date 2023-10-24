@@ -1,0 +1,62 @@
+@import "../../styles.scss";
+
+form {
+    width: 30%; 
+    margin: 0 auto; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+
+      small {
+        color: red; 
+        font-size: 12px;
+      }
+
+      .submit {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 20px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #64e58f;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .submit:disabled {
+        background-color: #ccc; 
+        cursor: not-allowed;
+      }
+  }
+
+
+  @include query (mobile){
+
+    form {
+        width: 100%;
+        padding: 10px;
+      }
+    
+      input {
+        width: 100%;
+      }
+
+  }
+  

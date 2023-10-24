@@ -1,0 +1,50 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(180, 212, 245);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0; 
+    
+        th,td{
+            border: 1px solid #ccc; 
+            padding: 8px;
+            text-align: left;
+        }
+    
+        th {
+            background-color: #f2f2f2
+          }
+    
+          tr:nth-child(even) {
+            background-color: #f9f9f9;
+          }
+    
+          tr:hover {
+            background-color: #ddd;
+          }
+      }
+      
+}
+
+$bp : (
+  mobile : 480px,
+  tablet : 768px,
+  small-screen: 900px,
+  medium-screen: 1200px,
+  default-screen: 1500px,
+  large-screen: 1850px,
+);
+
+@mixin query($display){
+  @each $key, $value in $bp{
+    @if ($display == $key){
+      @media (max-width: $value){@content;}
+    }
+  }
+
+}
